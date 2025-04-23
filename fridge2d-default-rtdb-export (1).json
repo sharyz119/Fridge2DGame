@@ -1,0 +1,1004 @@
+{
+  "completion_times": {
+    "95705e89-d39f-4806-bc54-fad8fc8b95c6": {
+      "completionTimeSeconds": 77.06532287597656,
+      "isFullCompletion": true,
+      "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+      "timestamp": "2025-03-24T10:55:55.1483090Z",
+      "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+    }
+  },
+  "custom_events": {
+    "95705e89-d39f-4806-bc54-fad8fc8b95c6": {
+      "-OM6m_osE_xfA46HaAgr": {
+        "count": 1,
+        "eventName": "user_reengaged",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:54:43.5044090Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      }
+    }
+  },
+  "game_results": {
+    "95705e89-d39f-4806-bc54-fad8fc8b95c6": {
+      "accuracy": 93.75,
+      "attempts": 16,
+      "correctPlacements": 15,
+      "endTime": "2025-03-24T10:55:55.1528300Z",
+      "finalScore": 155,
+      "gameDurationSeconds": 75.85874799999999,
+      "hintUsedCount": 1,
+      "restartCount": 0,
+      "scoreChanges": [
+        10,
+        10,
+        -10,
+        15,
+        10,
+        10,
+        10,
+        10,
+        10,
+        15,
+        10,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+      "tutorialCompletionRate": 0,
+      "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+    }
+  },
+  "hint_clicks": {
+    "95705e89-d39f-4806-bc54-fad8fc8b95c6": {
+      "-OM6mdis1Zglb0jo3iE_": {
+        "gameTimeElapsed": 19.914296999999998,
+        "hintCount": 1,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:54:59.2083710Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mffs-fGtrt0wQ1EZ": {
+        "gameTimeElapsed": 28.684207999999998,
+        "hintCount": 2,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:07.9782860Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mm17BST6Ye6ByDNI": {
+        "gameTimeElapsed": 54.039293,
+        "hintCount": 1,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:33.3333710Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      }
+    }
+  },
+  "interactions": {
+    "137a7c45-7549-4ed6-b0fb-36ae83982062": {
+      "-OM6fGnkgVkH8wg-uey8": {
+        "action": "drag_start",
+        "foodType": "mango",
+        "positionX": -25.410003662109375,
+        "positionY": -1.230010986328125,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:22:46.3423270Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fJUcy6B26k3SD5-8": {
+        "action": "drag_start",
+        "foodType": "pepper",
+        "positionX": -25.920013427734375,
+        "positionY": 0.05999755859375,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:22:57.0534030Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fKhkjcJsqocBUYvA": {
+        "action": "drag_start",
+        "foodType": "jam",
+        "positionX": -26.29998779296875,
+        "positionY": -1.230010986328125,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:02.4538280Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fLRcnFYDtCIRdNfv": {
+        "action": "drag_start",
+        "foodType": "yoghurt",
+        "positionX": -27.260009765625,
+        "positionY": -1.269989013671875,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:05.4500970Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fMQ7vp8v2gHs1mVF": {
+        "action": "drag_start",
+        "foodType": "vegetable",
+        "positionX": -25.3800048828125,
+        "positionY": 1.209991455078125,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:09.6990700Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fNOcDVcVXODnvYJ7": {
+        "action": "drag_start",
+        "foodType": "juice",
+        "positionX": -25.57000732421875,
+        "positionY": 2.459991455078125,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:13.8804040Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fNsskEKuYaZ7DLam": {
+        "action": "drag_start",
+        "foodType": "salmon",
+        "positionX": -26.459991455078125,
+        "positionY": 1.170013427734375,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:15.7502890Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fObkdsCzPakm68P_": {
+        "action": "drag_start",
+        "foodType": "butter",
+        "positionX": -27.6099853515625,
+        "positionY": 2.269989013671875,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:18.0217430Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fQK7SUJ-wlKpoqOf": {
+        "action": "drag_start",
+        "foodType": "eggplant",
+        "positionX": -26.899993896484375,
+        "positionY": 0,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:25.3181900Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fQZkQ-af5fuM9b-O": {
+        "action": "drag_start",
+        "foodType": "leftover",
+        "positionX": -28.160003662109375,
+        "positionY": -0.05999755859375,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:26.9373740Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fRYFe56UF1LIgoN-": {
+        "action": "drag_start",
+        "foodType": "apple",
+        "positionX": -28.54998779296875,
+        "positionY": 2.29998779296875,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:30.4878630Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fSH72y3tSW4Yskpr": {
+        "action": "drag_start",
+        "foodType": "broccoli",
+        "positionX": -26.499481201171875,
+        "positionY": 2.32952880859375,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:33.9949560Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fSlNDt-p_CThDBIi": {
+        "action": "drag_start",
+        "foodType": "breadbutter",
+        "positionX": -27.649993896484375,
+        "positionY": 1.170013427734375,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:35.6023120Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fVCc7fZy7OA7MTqE": {
+        "action": "drag_start",
+        "foodType": "juice",
+        "positionX": -25.57000732421875,
+        "positionY": 2.459991455078125,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:45.3559090Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fVwVElIQ35OKo8HI": {
+        "action": "drag_start",
+        "foodType": "vegetable",
+        "positionX": -25.3800048828125,
+        "positionY": 1.209991455078125,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:48.4972510Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fWQkz0nARbVrZlut": {
+        "action": "drag_start",
+        "foodType": "broccoli",
+        "positionX": -26.5,
+        "positionY": 2.329986572265625,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:50.2230040Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fWfN2eXYNXgpksDm": {
+        "action": "drag_start",
+        "foodType": "salmon",
+        "positionX": -26.459991455078125,
+        "positionY": 1.170013427734375,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:51.9973160Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fXtVVntJtsqrAObi": {
+        "action": "drag_start",
+        "foodType": "butter",
+        "positionX": -27.6099853515625,
+        "positionY": 2.269989013671875,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:23:56.3671290Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6f_Kklwb3p6Nk8pI_": {
+        "action": "drag_start",
+        "foodType": "apple",
+        "positionX": -28.54998779296875,
+        "positionY": 2.29998779296875,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:24:06.3170740Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fa3ck4j39w_50kb5": {
+        "action": "drag_start",
+        "foodType": "pepper",
+        "positionX": -25.920013427734375,
+        "positionY": 0.05999755859375,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:24:09.6187830Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6faYsFm3_uqr9pNxS": {
+        "action": "drag_start",
+        "foodType": "breadbutter",
+        "positionX": -27.649993896484375,
+        "positionY": 1.170013427734375,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:24:11.7515350Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fb27rLLaJxx6A3iV": {
+        "action": "drag_start",
+        "foodType": "egg",
+        "positionX": -28.57000732421875,
+        "positionY": 1.239990234375,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:24:13.6651470Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fbm-jt0SGFkBh4e2": {
+        "action": "drag_start",
+        "foodType": "eggplant",
+        "positionX": -26.899993896484375,
+        "positionY": 0,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:24:16.1349090Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fcGFfK0Ja9hWHn1g": {
+        "action": "drag_start",
+        "foodType": "mango",
+        "positionX": -25.410003662109375,
+        "positionY": -1.230010986328125,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "timestamp": "2025-03-24T10:24:18.9019720Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      }
+    },
+    "95705e89-d39f-4806-bc54-fad8fc8b95c6": {
+      "-OM6mb2-3m1qj9lGt98D": {
+        "action": "drag_start",
+        "foodType": "mango",
+        "positionX": -25.410003662109375,
+        "positionY": -1.230010986328125,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:54:48.6411350Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mblsNNKY_fsY6vNv": {
+        "action": "drag_start",
+        "foodType": "pepper",
+        "positionX": -25.920013427734375,
+        "positionY": 0.05999755859375,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:54:51.6093540Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mcG7vWY30wu1WDLS": {
+        "action": "drag_start",
+        "foodType": "vegetable",
+        "positionX": -25.3800048828125,
+        "positionY": 1.209991455078125,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:54:53.3696380Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mckNfqkVM7-KzRPy": {
+        "action": "drag_start",
+        "foodType": "juice",
+        "positionX": -25.57000732421875,
+        "positionY": 2.459991455078125,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:54:55.1733450Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mdEcFkyu_0qS8IDs": {
+        "action": "drag_start",
+        "foodType": "juice",
+        "positionX": -25.57000732421875,
+        "positionY": 2.459991455078125,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:54:57.6135740Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mehNZJpmXnd3SX5j": {
+        "action": "drag_start",
+        "foodType": "salmon",
+        "positionX": -26.459991455078125,
+        "positionY": 1.170013427734375,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:03.1214280Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mex-AsymoFTJZBSB": {
+        "action": "drag_start",
+        "foodType": "broccoli",
+        "positionX": -26.5,
+        "positionY": 2.329986572265625,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:04.4720620Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mfRFTokNkyRU6dIG": {
+        "action": "drag_start",
+        "foodType": "eggplant",
+        "positionX": -26.899993896484375,
+        "positionY": 0,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:06.1543070Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mgeNOTWpL7VPbv3O": {
+        "action": "drag_start",
+        "foodType": "butter",
+        "positionX": -27.6099853515625,
+        "positionY": 2.269989013671875,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:11.5389550Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mhOFOjImzVkJWyx7": {
+        "action": "drag_start",
+        "foodType": "apple",
+        "positionX": -28.54998779296875,
+        "positionY": 2.29998779296875,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:14.0957970Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mi775T8QWi-e2fQ6": {
+        "action": "drag_start",
+        "foodType": "yoghurt",
+        "positionX": -27.260009765625,
+        "positionY": -1.269989013671875,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:17.6251830Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mjpVKXeufO6I1Xe0": {
+        "action": "drag_start",
+        "foodType": "vegetable",
+        "positionX": -25.3800048828125,
+        "positionY": 1.209991455078125,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:24.6364480Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6ml2caaexu7FV00Iz": {
+        "action": "drag_start",
+        "foodType": "juice",
+        "positionX": -25.57000732421875,
+        "positionY": 2.459991455078125,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:29.0540330Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mlXsFtDOeZmLBfmt": {
+        "action": "drag_start",
+        "foodType": "broccoli",
+        "positionX": -26.5,
+        "positionY": 2.329986572265625,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:31.2265470Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mmWN8FIHJcKrzSMi": {
+        "action": "drag_start",
+        "foodType": "salmon",
+        "positionX": -26.459991455078125,
+        "positionY": 1.170013427734375,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:35.7414380Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mn-cj0nKT84kNJ76": {
+        "action": "drag_start",
+        "foodType": "broccoli",
+        "positionX": -26.5,
+        "positionY": 2.329986572265625,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:37.1715380Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mnFFhHzX92OG7LuI": {
+        "action": "drag_start",
+        "foodType": "pepper",
+        "positionX": -25.920013427734375,
+        "positionY": 0.05999755859375,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:38.7047670Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mnjV-52_5S6_IM7z": {
+        "action": "drag_start",
+        "foodType": "mango",
+        "positionX": -25.410003662109375,
+        "positionY": -1.230010986328125,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:40.3733700Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mnz7efXLuylzPkgs": {
+        "action": "drag_start",
+        "foodType": "jam",
+        "positionX": -26.29998779296875,
+        "positionY": -1.230010986328125,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:41.4044590Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6moTN7QbpPY4k3p9X": {
+        "action": "drag_start",
+        "foodType": "breadbutter",
+        "positionX": -27.649993896484375,
+        "positionY": 1.170013427734375,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:43.3088150Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6moxcmoqa9fBXGOZK": {
+        "action": "drag_start",
+        "foodType": "butter",
+        "positionX": -27.6099853515625,
+        "positionY": 2.269989013671875,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:45.2219920Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mpCFOfz9QIOIn36H": {
+        "action": "drag_start",
+        "foodType": "apple",
+        "positionX": -28.54998779296875,
+        "positionY": 2.29998779296875,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:46.5699400Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mpgVmN9l6EkFKOw8": {
+        "action": "drag_start",
+        "foodType": "egg",
+        "positionX": -28.57000732421875,
+        "positionY": 1.239990234375,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:48.0435190Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mpw7GZiPPnF2An3P": {
+        "action": "drag_start",
+        "foodType": "eggplant",
+        "positionX": -26.899993896484375,
+        "positionY": 0,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:49.9789020Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mqQNQPEmm3TPiBHf": {
+        "action": "drag_start",
+        "foodType": "leftover",
+        "positionX": -28.160003662109375,
+        "positionY": -0.05999755859375,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:51.6809180Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mqucTnHmpzJQpvGn": {
+        "action": "drag_start",
+        "foodType": "yoghurt",
+        "positionX": -27.260009765625,
+        "positionY": -1.269989013671875,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:53.2141470Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mr9FTUMPlm1B6QOL": {
+        "action": "drag_start",
+        "foodType": "cucumber",
+        "positionX": -28.44000244140625,
+        "positionY": -1.19000244140625,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:54.6200600Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      }
+    }
+  },
+  "placement_errors": {
+    "137a7c45-7549-4ed6-b0fb-36ae83982062": {
+      "-OM6fQoNm7faE0ZTP0cm": {
+        "correctZone": "f3",
+        "currentZone": "f1",
+        "foodType": "leftover",
+        "positionX": -28.160003662109375,
+        "positionY": -0.05999755859375,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "temperature": 4,
+        "timestamp": "2025-03-24T10:23:27.4713780Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fSWkgOpaIL9BwaHj": {
+        "correctZone": "f4",
+        "currentZone": "f1",
+        "foodType": "broccoli",
+        "positionX": -26.5,
+        "positionY": 2.329986572265625,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "temperature": 4,
+        "timestamp": "2025-03-24T10:23:34.5717540Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fT0-l3lNyjl6JSy2": {
+        "correctZone": "f2",
+        "currentZone": "f1",
+        "foodType": "breadbutter",
+        "positionX": -27.649993896484375,
+        "positionY": 1.170013427734375,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "temperature": 4,
+        "timestamp": "2025-03-24T10:23:36.2019890Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fbHkFPc08TV8QTsK": {
+        "correctZone": "f6",
+        "currentZone": "f1",
+        "foodType": "egg",
+        "positionX": -28.57000732421875,
+        "positionY": 1.239990234375,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "temperature": 4,
+        "timestamp": "2025-03-24T10:24:14.2833420Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fbm-jt0SGFkBh4e3": {
+        "correctZone": "f4",
+        "currentZone": "f1",
+        "foodType": "eggplant",
+        "positionX": -26.899993896484375,
+        "positionY": 0,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "temperature": 4,
+        "timestamp": "2025-03-24T10:24:16.6703290Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6fcVsml16m-gS9eZT": {
+        "correctZone": "f3",
+        "currentZone": "f1",
+        "foodType": "mango",
+        "positionX": -25.410003662109375,
+        "positionY": -1.230010986328125,
+        "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+        "temperature": 4,
+        "timestamp": "2025-03-24T10:24:19.4017850Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      }
+    },
+    "95705e89-d39f-4806-bc54-fad8fc8b95c6": {
+      "-OM6mckNfqkVM7-KzRQ-": {
+        "correctZone": "f6",
+        "currentZone": "f1",
+        "foodType": "juice",
+        "positionX": -25.57000732421875,
+        "positionY": 2.459991455078125,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "temperature": 4,
+        "timestamp": "2025-03-24T10:54:55.7078020Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mfRFTokNkyRU6dII": {
+        "correctZone": "f4",
+        "currentZone": "f2",
+        "foodType": "eggplant",
+        "positionX": -26.899993896484375,
+        "positionY": 0,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "temperature": 4,
+        "timestamp": "2025-03-24T10:55:06.8045930Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6miMkto1U11rMRJ3S": {
+        "correctZone": "f2",
+        "currentZone": "f4",
+        "foodType": "yoghurt",
+        "positionX": -27.260009765625,
+        "positionY": -1.269989013671875,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "temperature": 4,
+        "timestamp": "2025-03-24T10:55:18.7482660Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mlXsFtDOeZmLBfmv": {
+        "correctZone": "f4",
+        "currentZone": "f1",
+        "foodType": "broccoli",
+        "positionX": -26.5,
+        "positionY": 2.329986572265625,
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "temperature": 4,
+        "timestamp": "2025-03-24T10:55:31.9532810Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      }
+    }
+  },
+  "score_changes": {
+    "95705e89-d39f-4806-bc54-fad8fc8b95c6": {
+      "-OM6mbHcTn5LlWjRf_xI": {
+        "gameTimeElapsed": 9.80866,
+        "points": 10,
+        "reason": "Correct placement of mango",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:54:49.1027310Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mc0VCmuuJa6fK3wl": {
+        "gameTimeElapsed": 12.913124999999999,
+        "points": 10,
+        "reason": "Correct placement of pepper",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:54:52.2072030Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mcVkIy8yRNlo7njy": {
+        "gameTimeElapsed": 14.801950999999999,
+        "points": 10,
+        "reason": "Correct placement of vegetable",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:54:54.0960290Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mckNfqkVM7-KzRPz": {
+        "gameTimeElapsed": 16.411873,
+        "points": -10,
+        "reason": "Wrong placement of juice",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:54:55.7059450Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mdUFgW-XKNpbOuqh": {
+        "gameTimeElapsed": 19.064211,
+        "points": 10,
+        "reason": "Correct placement of juice",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:54:58.3582830Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mehNZJpmXnd3SX5k": {
+        "gameTimeElapsed": 24.439127,
+        "points": 15,
+        "reason": "Correct placement of salmon",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:03.7332050Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mfBcPs9xjIYfVI8d": {
+        "gameTimeElapsed": 26.005501,
+        "points": 10,
+        "reason": "Correct placement of broccoli",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:05.2995790Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mfRFTokNkyRU6dIH": {
+        "gameTimeElapsed": 27.509804,
+        "points": -10,
+        "reason": "Wrong placement of eggplant",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:06.8038820Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mffs-fGtrt0wQ1EY": {
+        "gameTimeElapsed": 28.683601999999997,
+        "points": -10,
+        "reason": "Used hint",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:07.9776780Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mgu-tc3D3UQms3-r": {
+        "gameTimeElapsed": 32.903908,
+        "points": 15,
+        "reason": "Correct placement of butter",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:12.1979870Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mhsVirx-yZSTz-Yl": {
+        "gameTimeElapsed": 37.014032,
+        "points": 10,
+        "reason": "Correct placement of apple",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:16.3081090Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6miMkto1U11rMRJ3R": {
+        "gameTimeElapsed": 39.444699,
+        "points": -10,
+        "reason": "Wrong placement of yoghurt",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:18.7387760Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mk47F5Z0PKqkwwOc": {
+        "gameTimeElapsed": 0,
+        "points": 10,
+        "reason": "Correct placement of vegetable",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:25.6996120Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6ml2caaexu7FV00J-": {
+        "gameTimeElapsed": 0,
+        "points": 10,
+        "reason": "Correct placement of juice",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:29.7576580Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mlXsFtDOeZmLBfmu": {
+        "gameTimeElapsed": 0,
+        "points": -10,
+        "reason": "Wrong placement of broccoli",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:31.9525470Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mml-dlf0JszV2X5h": {
+        "gameTimeElapsed": 0,
+        "points": 15,
+        "reason": "Correct placement of salmon",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:36.1887620Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mn-cj0nKT84kNJ77": {
+        "gameTimeElapsed": 0,
+        "points": 10,
+        "reason": "Correct placement of broccoli",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:37.7732490Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mnUs2CKcR5Tx5vg5": {
+        "gameTimeElapsed": 0,
+        "points": 10,
+        "reason": "Correct placement of pepper",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:39.7540680Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mnjV-52_5S6_IM8-": {
+        "gameTimeElapsed": 0,
+        "points": 10,
+        "reason": "Correct placement of mango",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:40.7832200Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6moDk538zylIGCWp0": {
+        "gameTimeElapsed": 0,
+        "points": 10,
+        "reason": "Correct placement of jam",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:42.3373490Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6moi-iNuTD1bKfalM": {
+        "gameTimeElapsed": 0,
+        "points": 10,
+        "reason": "Correct placement of breadbutter",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:44.0999440Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6moxcmoqa9fBXGOZL": {
+        "gameTimeElapsed": 0,
+        "points": 15,
+        "reason": "Correct placement of butter",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:45.8998630Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mpRsmb3uUl_bfzQl": {
+        "gameTimeElapsed": 0,
+        "points": 10,
+        "reason": "Correct placement of apple",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:47.3001500Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mpgVmN9l6EkFKOw9": {
+        "gameTimeElapsed": 0,
+        "points": 15,
+        "reason": "Correct placement of egg",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:48.8206210Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mqQNQPEmm3TPiBHe": {
+        "gameTimeElapsed": 0,
+        "points": 10,
+        "reason": "Correct placement of eggplant",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:51.0048730Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mqf-6Vut0r8LwD3Y": {
+        "gameTimeElapsed": 0,
+        "points": 10,
+        "reason": "Correct placement of leftover",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:52.4462440Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mqucTnHmpzJQpvGo": {
+        "gameTimeElapsed": 0,
+        "points": 10,
+        "reason": "Correct placement of yoghurt",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:53.9038270Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM6mrOsu7h-q9EJLYBq": {
+        "gameTimeElapsed": 0,
+        "points": 10,
+        "reason": "Correct placement of cucumber",
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "timestamp": "2025-03-24T10:55:55.1453390Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      }
+    }
+  },
+  "sessions": {
+    "137a7c45-7549-4ed6-b0fb-36ae83982062": {
+      "gameVersion": "1.0",
+      "platform": "Unity_Editor",
+      "sessionId": "137a7c45-7549-4ed6-b0fb-36ae83982062",
+      "startTime": "2025-03-24T10:22:39.4210260Z",
+      "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+    },
+    "95705e89-d39f-4806-bc54-fad8fc8b95c6": {
+      "deviceModel": "Mac14,2",
+      "gameVersion": "1.0",
+      "operatingSystem": "Mac OS X 15.2.0",
+      "platform": "Unity_Editor",
+      "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+      "startTime": "2025-03-24T10:54:39.2940810Z",
+      "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+    }
+  },
+  "stage_times": {
+    "95705e89-d39f-4806-bc54-fad8fc8b95c6": {
+      "-OM6mrOsu7h-q9EJLYBr": {
+        "sessionId": "95705e89-d39f-4806-bc54-fad8fc8b95c6",
+        "stageName": "Items placed 100%",
+        "timeInSeconds": 77.0634536743164,
+        "timestamp": "2025-03-24T10:55:55.1470830Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      }
+    }
+  },
+  "temperatures": {
+    "7f98cf8c-4d4d-4ce5-aad3-5310fab224d0": {
+      "-OM4RgZ7JhvFb8Wh9Hth": {
+        "sessionId": "7f98cf8c-4d4d-4ce5-aad3-5310fab224d0",
+        "temperature": 4,
+        "timestamp": "2025-03-23T23:59:49.8936520Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM4RgZ7JhvFb8Wh9Hti": {
+        "sessionId": "7f98cf8c-4d4d-4ce5-aad3-5310fab224d0",
+        "temperature": 5,
+        "timestamp": "2025-03-23T23:59:49.9041530Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM4RhmFUHLNmW3yjGFY": {
+        "sessionId": "7f98cf8c-4d4d-4ce5-aad3-5310fab224d0",
+        "temperature": 4,
+        "timestamp": "2025-03-23T23:59:54.6336180Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM4RhmFUHLNmW3yjGFZ": {
+        "sessionId": "7f98cf8c-4d4d-4ce5-aad3-5310fab224d0",
+        "temperature": 0,
+        "timestamp": "2025-03-23T23:59:54.6340370Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM4RikkxC0H-K2JAXuI": {
+        "sessionId": "7f98cf8c-4d4d-4ce5-aad3-5310fab224d0",
+        "temperature": 4,
+        "timestamp": "2025-03-23T23:59:58.5554260Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM4RikkxC0H-K2JAXuJ": {
+        "sessionId": "7f98cf8c-4d4d-4ce5-aad3-5310fab224d0",
+        "temperature": 4,
+        "timestamp": "2025-03-23T23:59:58.5559110Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      }
+    },
+    "c5f25c88-de36-4ad6-ab8a-85f3d678a735": {
+      "-OM4RFUFo2Be0xAR-3hv": {
+        "sessionId": "c5f25c88-de36-4ad6-ab8a-85f3d678a735",
+        "temperature": 4,
+        "timestamp": "2025-03-23T23:57:54.3003840Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM4RFUFo2Be0xAR-3hw": {
+        "sessionId": "c5f25c88-de36-4ad6-ab8a-85f3d678a735",
+        "temperature": 5,
+        "timestamp": "2025-03-23T23:57:54.3067080Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM4RFisA5MflkLjIVSl": {
+        "sessionId": "c5f25c88-de36-4ad6-ab8a-85f3d678a735",
+        "temperature": 4,
+        "timestamp": "2025-03-23T23:57:55.2496060Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM4RFisA5MflkLjIVSm": {
+        "sessionId": "c5f25c88-de36-4ad6-ab8a-85f3d678a735",
+        "temperature": 0,
+        "timestamp": "2025-03-23T23:57:55.2505960Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM4RFyVSwtm4VYk-otB": {
+        "sessionId": "c5f25c88-de36-4ad6-ab8a-85f3d678a735",
+        "temperature": 4,
+        "timestamp": "2025-03-23T23:57:56.2587670Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      },
+      "-OM4RFyVSwtm4VYk-otC": {
+        "sessionId": "c5f25c88-de36-4ad6-ab8a-85f3d678a735",
+        "temperature": 4,
+        "timestamp": "2025-03-23T23:57:56.2592650Z",
+        "userId": "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52"
+      }
+    }
+  },
+  "users": {
+    "dev_12E2D13D-A759-5021-BC3D-AFDC832DDC52": {
+      "firstSeen": "2025-03-23T23:57:47.4441840Z",
+      "gameVersion": "1.0",
+      "lastSeen": "2025-03-24T10:54:39.2620800Z",
+      "platform": "Unity_Editor"
+    }
+  }
+}

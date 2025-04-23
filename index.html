@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>%UNITY_WEB_NAME%</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #000; }
+    #unityContainer { width: 100%; height: 100%; }
+    canvas { outline: none; }
+  </style>
+</head>
+<body>
+  <div id="unityContainer">
+    <canvas id="unity-canvas" tabindex="1"></canvas>
+  </div>
+
+  <script>
+    // Focus canvas on page load and click
+    window.onload = function () {
+      const canvas = document.querySelector('canvas');
+      if (canvas) canvas.focus();
+    };
+
+    document.addEventListener('click', function () {
+      const canvas = document.querySelector('canvas');
+      if (canvas) canvas.focus();
+    });
+  </script>
+
+  <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+  <script>
+    createUnityInstance(document.querySelector("#unity-canvas"), {
+      dataUrl: "%UNITY_DATA_URL%",
+      frameworkUrl: "%UNITY_FRAMEWORK_URL%",
+      codeUrl: "%UNITY_CODE_URL%",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "%COMPANY_NAME%",
+      productName: "%PRODUCT_NAME%",
+      productVersion: "%PRODUCT_VERSION%"
+    });
+  </script>
+</body>
+</html>
