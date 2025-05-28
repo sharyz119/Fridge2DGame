@@ -1,3 +1,20 @@
+/*
+ * Fridge Organization Game - UIManager.cs
+ * 
+ * Author: Zixuan Wang
+ * 
+ * Description: Comprehensive UI controller that manages all user interface elements including panels,
+ * buttons, tutorial sequences, and final score display. Handles the complete UI flow and user interactions
+ * throughout the game experience.
+ * 
+ * Key Responsibilities:
+ * - Panel visibility management (tutorial, game, final panels)
+ * - Button interaction handling and state management
+ * - Temperature display coordination
+ * - Tutorial sequence management
+ * - Final score presentation and results display
+ */
+
 using UnityEngine;
 using TMPro;
 using System;
@@ -53,14 +70,14 @@ public class UIManager : MonoBehaviour
             Debug.Log("Activated only StartPanel1 during Awake");
         }
         
-        // 设置温度滑块的初始值和范围
+        // Set initial values and range for temperature slider
         if (TemperatureSlider != null)
         {
-            TemperatureSlider.minValue = 0;  // 最低温度
-            TemperatureSlider.maxValue = 8;  // 最高温度（设置为8度以测试超温警告）
+            TemperatureSlider.minValue = 0;  // Minimum temperature
+            TemperatureSlider.maxValue = 8;  // Maximum temperature (set to 8 degrees to test overheating warning)
             TemperatureSlider.value = 0; // Start with no temperature set
             
-            // 添加监听器
+            // Add listener
             TemperatureSlider.onValueChanged.AddListener(OnTemperatureChanged);
         }
     }
