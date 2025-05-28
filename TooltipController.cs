@@ -1,3 +1,20 @@
+/*
+ * Fridge Organization Game - TooltipController.cs
+ * 
+ * Author: Zixuan Wang
+ * 
+ * Description: Interactive help system that provides hover-based information display for food items
+ * and game elements. Delivers educational content and guidance to enhance the learning experience
+ * through contextual tooltips and dynamic positioning.
+ * 
+ * Key Responsibilities:
+ * - Hover-based information display and tooltip management
+ * - Food-specific guidance and educational content delivery
+ * - Dynamic tooltip positioning and layout management
+ * - Interactive help system coordination
+ * - Educational content presentation
+ */
+
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
