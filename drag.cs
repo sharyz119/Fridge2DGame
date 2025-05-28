@@ -1,3 +1,20 @@
+/*
+ * Fridge Organization Game - drag.cs
+ * 
+ * Author: Zixuan Wang
+ * 
+ * Description: Drag-and-drop interaction system for food items. Handles mouse-based dragging mechanics,
+ * zone detection, collision validation, and triggers analytics events when items are placed.
+ * This is the core interaction component that enables the educational gameplay.
+ * 
+ * Key Responsibilities:
+ * - Mouse-based dragging implementation with offset calculation
+ * - Zone detection and collision validation
+ * - Manager reference initialization with retry logic
+ * - Placement event triggering and analytics coordination
+ * - Visual feedback coordination during drag operations
+ */
+
 using UnityEngine;
 using System.Collections;
 
