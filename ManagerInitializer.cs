@@ -1,3 +1,20 @@
+/*
+ * Fridge Organization Game - ManagerInitializer.cs
+ * 
+ * Author: Zixuan Wang
+ * 
+ * Description: Manager initialization system that ensures proper setup and coordination of all
+ * game managers. Prevents initialization errors and provides centralized reference management
+ * for the complex multi-manager architecture.
+ * 
+ * Key Responsibilities:
+ * - Manager instance creation and validation
+ * - Reference distribution to game objects
+ * - Initialization order management and dependency resolution
+ * - Error prevention and debugging support
+ * - Centralized manager coordination
+ */
+
 using UnityEngine;
 
 /// <summary>
