@@ -1,3 +1,20 @@
+/*
+ * Fridge Organization Game - TooltipSystem.cs
+ * 
+ * Author: Zixuan Wang
+ * 
+ * Description: Core tooltip system that manages the display, positioning, and content of tooltips
+ * throughout the game. Works with TooltipController to provide a comprehensive help system
+ * that enhances the educational experience.
+ * 
+ * Key Responsibilities:
+ * - Tooltip display management and visibility control
+ * - Dynamic positioning and screen boundary handling
+ * - Content formatting and presentation
+ * - Tooltip lifecycle management (show/hide/update)
+ * - Integration with hoverable items and UI elements
+ */
+
 using UnityEngine;
 
 /// <summary>
