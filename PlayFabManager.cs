@@ -1,3 +1,20 @@
+/*
+ * Fridge Organization Game - PlayFabManager.cs
+ * 
+ * Author: Zixuan Wang
+ * 
+ * Description: Comprehensive PlayFab integration system that handles all data collection, user authentication,
+ * and analytics logging for research purposes. This is the primary data pipeline that captures detailed
+ * player behavior and game metrics for educational research analysis.
+ * 
+ * Key Responsibilities:
+ * - User authentication and session management
+ * - Detailed event logging (placements, temperature changes, scores)
+ * - Statistics tracking and updating with retry logic
+ * - Error handling and network resilience
+ * - Data export and research analytics support
+ */
+
 using UnityEngine;
 using System;
 using System.Collections.Generic;
