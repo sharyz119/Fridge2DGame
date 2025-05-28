@@ -1,3 +1,20 @@
+/*
+ * Fridge Organization Game - LifeAndScoreManager.cs
+ * 
+ * Author: Zixuan Wang
+ * 
+ * Description: Core scoring system that validates food placements, calculates scores, and manages
+ * food-zone mappings. This system determines the correctness of player actions and provides detailed
+ * analytics data for research purposes.
+ * 
+ * Key Responsibilities:
+ * - Food placement correctness evaluation
+ * - Score calculation (5 points per correct item)
+ * - Food-zone mapping and validation
+ * - Detailed placement data collection for analytics
+ * - Temperature-based scoring adjustments
+ */
+
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
@@ -16,7 +33,7 @@ public class LifeAndScoreManager : MonoBehaviour
     public GameObject FinalPanel;
     public TextMeshProUGUI FinalScoreText;
 
-    // 总尝试次数 & 正确次数
+    // Total attempts & correct attempts
     private int totalAttempts = 0;
     private int correctAttempts = 0;
 
@@ -25,15 +42,15 @@ public class LifeAndScoreManager : MonoBehaviour
 
     private int correctlyPlacedItems = 0;
 
-    // 游戏状态追踪
+    // Game state tracking
     private DateTime gameStartTime;
     private bool isGameActive = false;
     private float lastScoreChangeTime = 0f;
 
-    // 每个食物放置的尝试次数（防止重复放置时多次失败）
+    // Attempt count for each food placement (prevent multiple failures for repeated placement)
     private Dictionary<string, int> itemPlacementAttempts = new Dictionary<string, int>();
 
-    // 食物温度范围与分数定义
+    // Food temperature range and score definitions
     private Dictionary<string, (int minTemp, int maxTemp, string storageType)>
         foodRequirements = new Dictionary<string, (int, int, string)>
     {
@@ -86,7 +103,7 @@ public class LifeAndScoreManager : MonoBehaviour
         StartGame();
     }
     
-    // 开始游戏，记录时间，通知 Analytics
+    // Start game, record time, notify Analytics
     public void StartGame()
     {
         gameStartTime = DateTime.Now;
@@ -107,7 +124,7 @@ public class LifeAndScoreManager : MonoBehaviour
         }
     }
 
-    // 核心方法：检查放置是否正确
+    // Core method: Check if placement is correct
     public bool CheckPlacement(string foodType, string currentZone, int currentTemp)
     {
         if (string.IsNullOrEmpty(foodType) || string.IsNullOrEmpty(currentZone))
@@ -224,7 +241,7 @@ public class LifeAndScoreManager : MonoBehaviour
         return isCorrect;
     }
 
-    // 记录阶段完成情况
+    // Record stage completion status
     private void LogStageCompletion(float completionPercentage)
     {
         GameAnalytics analytics = GameAnalytics.Instance;
@@ -242,7 +259,7 @@ public class LifeAndScoreManager : MonoBehaviour
         }
     }
     
-    // 记录游戏完成情况
+    // Record game completion status
     private void LogGameCompletion()
     {
         GameAnalytics analytics = GameAnalytics.Instance;
@@ -320,18 +337,18 @@ public class LifeAndScoreManager : MonoBehaviour
         isGameActive = false;
         TimeSpan gameTime = DateTime.Now - gameStartTime;
         
-        // 计算准确率（正确放置次数 / 总放置次数 * 100）
+        // Calculate accuracy (correct placements / total placements * 100)
         float accuracy = (totalAttempts > 0)
             ? ((float)correctAttempts / totalAttempts) * 100f
             : 0f;
         
-        // 等级
+        // Grade
         string grade = CalculateGrade(accuracy);
         
-        // 生成总结信息
+        // Generate summary information
         string summary = GenerateGameSummary(accuracy, temperatureScore);
 
-        // 上报游戏结束
+        // Report game end
         GameAnalytics analytics = GameAnalytics.Instance;
         if (analytics != null)
         {
@@ -340,7 +357,7 @@ public class LifeAndScoreManager : MonoBehaviour
                 analytics.LogGameEnd(Mathf.RoundToInt(accuracy), accuracy, grade);
                 analytics.LogCompletionTime((float)gameTime.TotalSeconds, (totalAttempts >= totalFoodItems));
                 
-                // 记录详细统计
+                // Record detailed statistics
                 Dictionary<string, object> stats = GetGameStats();
                 foreach (var stat in stats)
                 {
@@ -358,7 +375,7 @@ public class LifeAndScoreManager : MonoBehaviour
             }
         }
         
-        // 显示最终结果到对应UI
+        // Display final results to corresponding UI
         if (FinalPanel != null)
         {
             FinalPanel.SetActive(true);
@@ -370,7 +387,7 @@ public class LifeAndScoreManager : MonoBehaviour
         else
         {
             Debug.LogError("FinalPanel reference is missing in LifeAndScoreManager");
-            // 若没有绑定 FinalPanel，可尝试调用 GameManager 的 ShowFinalPanel
+            // If FinalPanel is not bound, try calling GameManager's ShowFinalPanel
             if (GameManager.Instance != null)
             {
                 GameManager.Instance.ShowFinalPanel();
@@ -389,13 +406,13 @@ public class LifeAndScoreManager : MonoBehaviour
         string summary = $"Final Score: {finalScore}/100\n";
         summary += $"Correctly placed items: {correctItems}/20\n";
         
-        // 给出当前温度的信息
+        // Provide current temperature information
         if (TemperatureManager.Instance != null)
         {
             int currentTemp = TemperatureManager.Instance.currentTemperature;
             if (currentTemp < 1)
             {
-                summary += $"<color=red>Temperature: {currentTemp}°C (Too Low)</color>\n" +
+                summary += $"<color=red>Temperature: {currentTemp}°C (Too Cold)</color>\n" +
                            "This temperature is too cold for most foods.\n\n";
             }
             else if (currentTemp > 7)
@@ -415,7 +432,7 @@ public class LifeAndScoreManager : MonoBehaviour
             }
         }
         
-        // 列出正确与错误放置的食物
+        // List correctly and incorrectly placed foods
         summary += "Placement Summary:\n";
         
         List<string> correctItemsList = new List<string>();
@@ -467,7 +484,7 @@ public class LifeAndScoreManager : MonoBehaviour
 
     public void RestartGame()
     {
-        // 记录重启事件
+        // Record restart event
         GameAnalytics analytics = GameAnalytics.Instance;
         if (analytics != null)
         {
@@ -485,7 +502,7 @@ public class LifeAndScoreManager : MonoBehaviour
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
 
-    // 获取食物温度范围
+    // Get food temperature range
     public (int minTemp, int maxTemp) GetFoodTemperatureRange(string foodType)
     {
         if (foodRequirements.TryGetValue(foodType, out var requirements))
@@ -495,7 +512,7 @@ public class LifeAndScoreManager : MonoBehaviour
         return (0, 0);
     }
 
-    // 重置状态
+    // Reset state
     public void ResetGameState()
     {
         currentScore = 0;
@@ -509,7 +526,7 @@ public class LifeAndScoreManager : MonoBehaviour
         UpdateUI();
     }
     
-    // 获取当前状态统计信息
+    // Get current state statistics
     public Dictionary<string, object> GetGameStats()
     {
         float accuracy = (totalAttempts > 0) ? ((float)correctAttempts / totalAttempts) * 100f : 0f;
