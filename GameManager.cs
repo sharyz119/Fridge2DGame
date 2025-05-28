@@ -1,3 +1,19 @@
+/*
+ * Fridge Organization Game - GameManager.cs
+ * 
+ * Author: Zixuan Wang
+ * 
+ * Description: Central game controller that manages game state, coordinates between different systems,
+ * handles scoring, and manages analytics event logging. This is the main orchestrator for the entire
+ * game flow from start to finish.
+ * 
+ * Key Responsibilities:
+ * - Game state management (start, end, restart)
+ * - Score tracking and coordination
+ * - Analytics event coordination
+ * - Manager initialization and reference management
+ */
+
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
