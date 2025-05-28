@@ -1,3 +1,20 @@
+/*
+ * Fridge Organization Game - WebGLErrorHandler.cs
+ * 
+ * Author: Zixuan Wang
+ * 
+ * Description: WebGL-specific error handling and debugging system that manages browser-specific
+ * issues, JavaScript integration errors, and web deployment challenges. Ensures robust
+ * performance across different web browsers and platforms.
+ * 
+ * Key Responsibilities:
+ * - WebGL error detection and handling
+ * - Browser compatibility issue management
+ * - JavaScript-Unity communication error handling
+ * - Web deployment debugging support
+ * - Cross-platform web performance monitoring
+ */
+
 using UnityEngine;
 using System;
 using System.Collections.Generic;
