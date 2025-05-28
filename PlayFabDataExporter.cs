@@ -1,3 +1,20 @@
+/*
+ * Fridge Organization Game - PlayFabDataExporter.cs
+ * 
+ * Author: Zixuan Wang
+ * 
+ * Description: Data export and analysis tools for retrieving, formatting, and processing PlayFab
+ * analytics data. Provides functionality for researchers to export game data in various formats
+ * for academic analysis and research purposes.
+ * 
+ * Key Responsibilities:
+ * - Data retrieval from PlayFab services
+ * - CSV export functionality and data formatting
+ * - Data processing and batch operations
+ * - Research data preparation and analysis support
+ * - Export configuration and customization
+ */
+
 using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
