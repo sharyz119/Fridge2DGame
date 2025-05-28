@@ -1,3 +1,20 @@
+/*
+ * Fridge Organization Game - HoverableItem.cs
+ * 
+ * Author: Zixuan Wang
+ * 
+ * Description: Hoverable item component that enables tooltip functionality for game objects.
+ * Detects mouse hover events and triggers tooltip display to provide contextual information
+ * and educational content for food items and UI elements.
+ * 
+ * Key Responsibilities:
+ * - Mouse hover detection and event handling
+ * - Tooltip trigger coordination with tooltip system
+ * - Hoverable item identification and content management
+ * - Integration with educational content delivery
+ * - User interaction feedback and guidance
+ */
+
 using UnityEngine;
 using UnityEngine.EventSystems;
 
