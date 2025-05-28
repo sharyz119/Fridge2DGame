@@ -1,3 +1,20 @@
+/*
+ * Fridge Organization Game - UserData.cs
+ * 
+ * Author: Zixuan Wang
+ * 
+ * Description: User identification and session management system that handles user ID generation,
+ * storage, and session tracking. Manages user preferences and provides persistent data storage
+ * for research and analytics purposes.
+ * 
+ * Key Responsibilities:
+ * - User ID generation and storage
+ * - Session tracking and management
+ * - Data persistence and retrieval
+ * - User preference management
+ * - Research participant identification
+ */
+
 using UnityEngine;
 using System;
 
