@@ -1,3 +1,20 @@
+/*
+ * Fridge Organization Game - GameAnalytics.cs
+ * 
+ * Author: Zixuan Wang
+ * 
+ * Description: Local analytics and engagement tracking system that monitors player behavior,
+ * session duration, and user engagement metrics. Works alongside PlayFab to provide comprehensive
+ * data collection for educational research and game improvement.
+ * 
+ * Key Responsibilities:
+ * - Session duration tracking and engagement ratio calculation
+ * - User engagement metrics and interaction patterns
+ * - Local event queuing and data persistence
+ * - Completion time analysis and performance metrics
+ * - Application lifecycle handling and data cleanup
+ */
+
 using UnityEngine;
 using System.Collections.Generic;
 using System;
@@ -12,38 +29,38 @@ public class GameAnalytics : MonoBehaviour
     private UserData userData;
     private PlayFabManager playFabManager;
     
-    // Analytics queue system
+    // Event queue for batch processing
     private Queue<AnalyticsEvent> eventQueue = new Queue<AnalyticsEvent>();
     private string sessionId;
     private string userId;
     private DateTime lastEventSendTime;
     private float eventSendInterval = 30f; // Send events every 30 seconds or when explicitly called
     
-    // Event class for the queue
+    // Internal event structure
     private class AnalyticsEvent
     {
         public string EventName;
         public Dictionary<string, object> EventData;
     }
     
-    // 游戏时长追踪
+    // game duration tracking
     private DateTime gameStartTime;
     private bool isGameActive = false;
     
-    // 统计数据
+    // User behavior tracking
     private int restartButtonClickCount = 0;
     private int tutorialStepsCompleted = 0;
-    private int totalTutorialSteps = 6; // 假设教程有6个步骤
+    private int totalTutorialSteps = 6; // Assume tutorial has 6 steps
     private List<int> scoreChanges = new List<int>();
 
-    // 自定义事件跟踪
+    // Custom event tracking
     private Dictionary<string, int> customEventCounts = new Dictionary<string, int>();
     
-    // A/B测试分组
+    // A/B testing support
     private string abTestGroup = null;
     private Dictionary<string, string> abTestVariants = new Dictionary<string, string>();
     
-    // 用户参与度指标
+    // Engagement metrics
     private Dictionary<string, float> engagementMetrics = new Dictionary<string, float>
     {
         { "session_time", 0f },
@@ -51,10 +68,10 @@ public class GameAnalytics : MonoBehaviour
         { "interaction_count", 0 }
     };
     
-    // 会话开始时间（用于计算总时长）
+    // Session start time (for calculating total duration)
     private DateTime sessionStartTime;
     private DateTime lastActiveTime;
-    private float inactiveThreshold = 30f; // 30秒无操作视为不活跃
+    private float inactiveThreshold = 30f; // 30 seconds of inactivity considered inactive
     
     private void Awake()
     {
@@ -76,7 +93,7 @@ public class GameAnalytics : MonoBehaviour
         {
             Debug.Log("初始化游戏分析系统...");
             
-            // 获取UserData实例
+            // get UserData instance
             userData = FindObjectOfType<UserData>();
             if (userData == null)
             {
@@ -101,25 +118,25 @@ public class GameAnalytics : MonoBehaviour
                 userData.UserId = userId;
             }
 
-            // 获取PlayFabManager实例
+            // get PlayFabManager instance
             playFabManager = FindObjectOfType<PlayFabManager>();
             if (playFabManager == null)
             {
-                Debug.LogWarning("未找到PlayFabManager，创建新实例");
+                Debug.LogWarning("PlayFabManager not found, creating new instance");
                 GameObject playFabObj = new GameObject("PlayFabManager");
                 playFabManager = playFabObj.AddComponent<PlayFabManager>();
             }
             
             isInitialized = true;
             lastEventSendTime = DateTime.UtcNow;
-            Debug.Log("游戏分析系统初始化成功!");
+            Debug.Log("Game analytics system initialized successfully!");
             
-            // 初始化成功后立即记录会话开始
+            // log session start after initialization
             LogSessionStart();
         }
         catch (Exception ex)
         {
-            Debug.LogError($"游戏分析系统初始化错误: {ex.Message}\n堆栈: {ex.StackTrace}");
+            Debug.LogError($"Game analytics system initialization error: {ex.Message}\nStack trace: {ex.StackTrace}");
         }
     }
 
@@ -127,19 +144,19 @@ public class GameAnalytics : MonoBehaviour
     {
         if (!isInitialized) return;
 
-        // 记录游戏开始时间
+        // record game start time
         gameStartTime = DateTime.UtcNow;
         sessionStartTime = DateTime.UtcNow;
         lastActiveTime = DateTime.UtcNow;
         isGameActive = true;
         
-        // 使用PlayFab记录会话开始
+        // use PlayFab to record session start
         if (playFabManager != null)
         {
             playFabManager.LogSessionStart();
         }
         
-        Debug.Log($"会话开始: {userData.SessionId}");
+        Debug.Log($"Session started: {userData.SessionId}");
     }
 
     /// <summary>
@@ -179,7 +196,7 @@ public class GameAnalytics : MonoBehaviour
         }
     }
 
-    // 根据分数确定等级
+    // determine grade based on score
     private string DetermineGrade(int finalScore)
     {
         if (finalScore >= 90) return "A";
@@ -189,7 +206,7 @@ public class GameAnalytics : MonoBehaviour
         return "F";
     }
 
-    // 重置会话统计数据
+    // reset session statistics
     private void ResetSessionStats()
     {
         tutorialStepsCompleted = 0;
@@ -200,7 +217,7 @@ public class GameAnalytics : MonoBehaviour
     {
         if (!isInitialized) return;
 
-        // 使用PlayFab记录食物放置
+        // use PlayFab to record food placement
         if (playFabManager != null)
         {
             playFabManager.LogFoodPlacement(foodType, targetZone, position, isCorrect, temperature);
@@ -211,7 +228,7 @@ public class GameAnalytics : MonoBehaviour
     {
         if (!isInitialized) return;
 
-        // 使用PlayFab记录温度变化
+        // use PlayFab to record temperature changey
         if (playFabManager != null)
         {
             playFabManager.LogTemperatureChange(temperature);
@@ -222,75 +239,74 @@ public class GameAnalytics : MonoBehaviour
     {
         if (!isInitialized) return;
 
-        // 添加到分数变化历史
+        // add to score change history
         scoreChanges.Add(points);
 
-        // 使用PlayFab记录分数变化
+        // use PlayFab to record score change
         if (playFabManager != null)
         {
             playFabManager.LogScoreChange(points, reason);
         }
         
-        Debug.Log($"分数变化: {points} 分, 原因: {reason}");
+        Debug.Log($"Score changed: {points} points, reason: {reason}");
     }
 
-    // 记录游戏开始
+    // record game start
     public void LogGameStart()
     {
-        // 使用PlayFab记录游戏开始
+        // use PlayFab to record game start
         if (playFabManager != null)
         {
             playFabManager.LogGameStart();
         }
-        Debug.Log("分析: 游戏开始");
+        Debug.Log("Game started");
     }
 
-    // 记录游戏结束
+    // record game end
     public void LogGameEnd(int finalScore, float accuracy, string grade)
     {
-        // 使用PlayFab记录游戏结束
+        // use PlayFab to record game end
         if (playFabManager != null)
         {
             playFabManager.LogGameEnd(finalScore, accuracy, grade);
         }
-        Debug.Log($"分析: 游戏结束 - 得分: {finalScore}, 准确度: {accuracy}%, 等级: {grade}");
+        Debug.Log($"Game ended - Score: {finalScore}, Accuracy: {accuracy}%, Grade: {grade}");
     }
 
-    // 记录分数变化
+    // record score change
     public void LogScore(int score)
     {
-        Debug.Log($"分析: 分数变更为 {score}");
+        Debug.Log($"Score changed to {score}");
     }
 
-    // 记录温度变化
+    // record temperature change
     public void LogTemperature(int temperature)
     {
-        Debug.Log($"分析: 温度变更为 {temperature}°C");
+        Debug.Log($"Temperature changed to {temperature}°C");
     }
 
-    // 记录食物放置
+    // record food placement
     public void LogPlacement(string foodType, string zone, Vector3 position, bool isCorrect, int temperature)
     {
-        Debug.Log($"分析: {foodType} 放置在 {zone} (正确: {isCorrect})");
+        Debug.Log($"{foodType} placed in {zone} (correct: {isCorrect})");
     }
 
-    // 记录重启游戏
+    // record restart game
     public void LogRestartButtonClick()
     {
         if (!isInitialized) return;
 
         restartButtonClickCount++;
         
-        // 计算当前游戏时长
+        // calculate current game duration
         TimeSpan currentDuration = DateTime.UtcNow - gameStartTime;
 
-        Debug.Log($"游戏重新开始 ({restartButtonClickCount} 次，本次会话)");
-        
-        // 重置游戏开始时间，因为游戏重新开始了
+        Debug.Log($"Game restarted ({restartButtonClickCount} times, this session)");
+    
         gameStartTime = DateTime.UtcNow;
     }
 
-    // 记录教程进度
+    // record tutorial progress
     public void LogTutorialProgress(int stepNumber, string stepName)
     {
         if (!isInitialized) return;
@@ -300,59 +316,59 @@ public class GameAnalytics : MonoBehaviour
             tutorialStepsCompleted = stepNumber;
         }
         
-        Debug.Log($"教程进度: 步骤 {stepNumber}/{totalTutorialSteps} ({stepName})");
+        Debug.Log($"Tutorial progress: step {stepNumber}/{totalTutorialSteps} ({stepName})");
     }
 
-    // 记录错误
+    // record error
     public void LogError(string errorType, string message)
     {
-        Debug.LogError($"分析错误: {errorType} - {message}");
+        Debug.LogError($"Error: {errorType} - {message}");
     }
 
-    // 记录拖动开始
+    // record drag start
     public void LogItemDragStart(string foodType, Vector3 position)
     {
-        Debug.Log($"分析: 开始拖动 {foodType} 从位置 ({position.x}, {position.y})");
+        Debug.Log($"Start dragging {foodType} from position ({position.x}, {position.y})");
     }
 
-    // 记录正确放置
+    // record correct placement
     public void LogCorrectPlacement(string foodType, string zone, Vector3 position, int temperature)
     {
-        // 使用已有的LogPlacement方法
+        // use existing LogPlacement method
         LogPlacement(foodType, zone, position, true, temperature);
         
-        Debug.Log($"分析: {foodType} 正确放置在 {zone}，温度 {temperature}°C");
+        Debug.Log($"{foodType} correctly placed in {zone}, temperature {temperature}°C");
     }
 
-    // 记录错误放置
+    // record incorrect placement
     public void LogIncorrectPlacement(string foodType, string currentZone, string correctZone, Vector3 position, int temperature)
     {
-        // 使用已有的LogPlacement方法
+        // use existing LogPlacement method
         LogPlacement(foodType, currentZone, position, false, temperature);
         
-        Debug.Log($"分析: {foodType} 错误放置在 {currentZone} (应该是 {correctZone})，温度 {temperature}°C");
+        Debug.Log($"{foodType} incorrectly placed in {currentZone} (should be {correctZone}), temperature {temperature}°C");
     }
 
-    // 记录无效放置（未在有效区域内）
+    // record invalid placement (not in valid area)
     public void LogInvalidPlacement(string foodType, Vector3 position, string reason, int temperature)
     {
-        Debug.Log($"分析: {foodType} 放置在无效区域 ({position.x}, {position.y})。原因: {reason}");
+        Debug.Log($"{foodType} placed in invalid area ({position.x}, {position.y}). Reason: {reason}");
     }
 
-    // 获取当前游戏时长（秒）
+    // get current game time (seconds)
     public float GetCurrentGameTime()
     {
         if (!isGameActive) return 0;
         return (float)(DateTime.UtcNow - gameStartTime).TotalSeconds;
     }
     
-    // 获取重新开始次数
+    // get restart count
     public int GetRestartCount()
     {
         return restartButtonClickCount;
     }
 
-    // 更新用户参与度计时器
+    // update user engagement timer
     private void Update()
     {
         if (isInitialized && isGameActive)
@@ -360,13 +376,13 @@ public class GameAnalytics : MonoBehaviour
             // 更新会话时间
             engagementMetrics["session_time"] = (float)(DateTime.UtcNow - sessionStartTime).TotalSeconds;
             
-            // 检查用户活跃状态
-            if (Input.anyKey || Input.GetMouseButton(0) || Input.GetMouseButton(1))
+            // Check user activity status
+            if (Input.anyKeyDown || Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
             {
-                // 如果用户处于不活跃状态后变为活跃
+                // User is active
                 if ((DateTime.UtcNow - lastActiveTime).TotalSeconds > inactiveThreshold)
                 {
-                    // 记录用户重新变为活跃
+                    
                     LogCustomEvent("user_reengaged");
                 }
                 
@@ -374,7 +390,7 @@ public class GameAnalytics : MonoBehaviour
                 engagementMetrics["interaction_count"] += 1;
             }
             
-            // 更新活跃时间
+            // Update active time
             if ((DateTime.UtcNow - lastActiveTime).TotalSeconds <= inactiveThreshold)
             {
                 engagementMetrics["active_time"] += Time.deltaTime;
@@ -391,45 +407,45 @@ public class GameAnalytics : MonoBehaviour
         }
     }
 
-    // 记录自定义事件
+    // record custom event
     public void LogCustomEvent(string eventName, Dictionary<string, object> parameters = null)
     {
         if (!isInitialized) return;
         
-        // 更新事件计数
+        // update event count
         if (!customEventCounts.ContainsKey(eventName))
             customEventCounts[eventName] = 1;
         else
             customEventCounts[eventName]++;
         
-        Debug.Log($"自定义事件记录: {eventName}");
+        Debug.Log($"Custom event recorded: {eventName}");
     }
     
-    // 设置A/B测试组
+    // set A/B test group
     public void SetABTestGroup(string groupName)
     {
         abTestGroup = groupName;
         
-        Debug.Log($"用户分配到A/B测试组: {groupName}");
+        Debug.Log($"User assigned to A/B test group: {groupName}");
     }
     
-    // 记录A/B测试变体
+    // record A/B test variant
     public void SetABTestVariant(string testName, string variantName)
     {
         abTestVariants[testName] = variantName;
         
-        Debug.Log($"A/B测试 '{testName}' 变体设置为: {variantName}");
+        Debug.Log($"A/B test '{testName}' variant set to: {variantName}");
     }
     
-    // 记录用户参与度指标
+    // record user engagement metrics
     public void LogEngagementMetrics()
     {
         if (!isInitialized) return;
         
-        Debug.Log($"参与度指标记录 - 活跃: {engagementMetrics["active_time"]}秒, 会话: {engagementMetrics["session_time"]}秒");
+        Debug.Log($"Engagement metrics recorded - Active: {engagementMetrics["active_time"]}s, Session: {engagementMetrics["session_duration"]}s");
     }
     
-    // 记录界面交互事件
+    // record UI interaction event
     public void LogUIInteraction(string elementName, string action)
     {
         Dictionary<string, object> parameters = new Dictionary<string, object>
@@ -442,15 +458,15 @@ public class GameAnalytics : MonoBehaviour
         LogCustomEvent("ui_interaction", parameters);
     }
     
-    // 获取当前界面名称
+    // get current screen name
     private string GetCurrentScreenName()
     {
-        // 这里可以实现获取当前UI界面的逻辑
-        // 简单实现，可以根据需要完善
+        // here can implement the logic to get the current UI screen name
+        // simple implementation, can be improved as needed
         return UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
     }
     
-    // 记录功能使用频率
+    // record feature usage frequency
     public void LogFeatureUsage(string featureName)
     {
         Dictionary<string, object> parameters = new Dictionary<string, object>
@@ -462,7 +478,7 @@ public class GameAnalytics : MonoBehaviour
         LogCustomEvent("feature_usage", parameters);
     }
     
-    // 记录学习曲线数据
+    // record learning curve data
     public void LogLearningProgress(string task, int attemptNumber, bool success, float timeSpent)
     {
         Dictionary<string, object> parameters = new Dictionary<string, object>
@@ -476,19 +492,19 @@ public class GameAnalytics : MonoBehaviour
         LogCustomEvent("learning_progress", parameters);
     }
     
-    // 获取用户参与度指标
+    // get user engagement metrics
     public Dictionary<string, float> GetEngagementMetrics()
     {
         return new Dictionary<string, float>(engagementMetrics);
     }
     
-    // 获取A/B测试组
+    // get A/B test group
     public string GetABTestGroup()
     {
         return abTestGroup;
     }
     
-    // 获取A/B测试变体
+    // get A/B test variant
     public string GetABTestVariant(string testName)
     {
         if (abTestVariants.ContainsKey(testName))
@@ -496,54 +512,54 @@ public class GameAnalytics : MonoBehaviour
         return null;
     }
     
-    // 重置会话时，同时重置参与度指标
+    // reset session, also reset engagement metrics
     public void ResetSession()
     {
-        // 记录之前会话的参与度数据
+        // record engagement metrics of previous session
         LogEngagementMetrics();
         
-        // 重置指标
+        // reset engagement metrics
         sessionStartTime = DateTime.UtcNow;
         lastActiveTime = DateTime.UtcNow;
         engagementMetrics["session_time"] = 0f;
         engagementMetrics["active_time"] = 0f;
         engagementMetrics["interaction_count"] = 0;
         
-        Debug.Log("会话和参与度指标已重置");
+        Debug.Log("Session and engagement metrics have been reset");
     }
     
-    // 应用退出前记录数据
+    // record engagement metrics before application quit
     private void OnApplicationQuit()
     {
         if (isInitialized && isGameActive)
         {
             LogEngagementMetrics();
-            Debug.Log("应用退出时记录最终参与度指标");
+            Debug.Log("Record engagement metrics before application quit");
         }
     }
 
-    // 记录游戏完成时间
+    // record game completion time
     public void LogCompletionTime(float timeInSeconds, bool isFullCompletion)
     {
         if (!isInitialized) return;
         
-        Debug.Log($"游戏完成时间记录: {timeInSeconds} 秒, 完全完成: {isFullCompletion}");
+        Debug.Log($"Game completion time recorded: {timeInSeconds} seconds, fully completed: {isFullCompletion}");
     }
 
-    // 记录玩家在特定阶段花费的时间
+    // record time spent in specific stage
     public void LogStageTime(string stageName, float timeInSeconds)
     {
         if (!isInitialized) return;
         
-        Debug.Log($"阶段时间记录: {stageName} - {timeInSeconds} 秒");
+        Debug.Log($"Stage time recorded: {stageName} - {timeInSeconds} seconds");
     }
 
-    // 记录用户遇到的困难
+    // record user difficulty
     public void LogUserDifficulty(string difficultyType, string description, int attemptCount)
     {
         if (!isInitialized) return;
         
-        Debug.Log($"用户困难记录: {difficultyType} - {description} (尝试次数: {attemptCount})");
+        Debug.Log($"User difficulty recorded: {difficultyType} - {description} (attempt count: {attemptCount})");
     }
 
     /// <summary>
