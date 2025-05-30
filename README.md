@@ -5,7 +5,7 @@ please visit online game link: https://sharyz119.itch.io/fridge2dgame
 
 ## Project Overview
 
-The **Fridge Organization Game** is an educational Unity-based game designed to teach players about proper food storage, temperature management, and food safety principles. The game combines interactive gameplay with comprehensive data collection for research and educational analysis.
+The **Fridge Organization Game** is an educational Unity-based game designed to teach players about proper food storage, temperature management, and food safety principles. The game combines interactive gameplay with comprehensive data collection for research and educational analysis. Notice: for further develop this game, please combine with Fridge2dGame.unitypackage to work together.
 
 
 ## Main Features and Objectives
@@ -56,7 +56,7 @@ Fridge Organization Game
 
 ### Core Game Management
 
-#### `GameManager.cs` (387 lines)
+#### `GameManager.cs` 
 **Purpose**: Central game controller and coordinator
 **Main Functions**:
 - Game state management (start, end, restart)
@@ -70,7 +70,7 @@ Fridge Organization Game
 - `ShowFinalPanel()`: Displays end-game results
 - `LogFoodPlacement()`: Coordinates analytics logging
 
-#### `UIManager.cs` (1,410 lines)
+#### `UIManager.cs`
 **Purpose**: Comprehensive UI control and panel management
 **Main Functions**:
 - Panel visibility management (tutorial, game, final panels)
@@ -84,7 +84,7 @@ Fridge Organization Game
 - Final panel with detailed results
 - Button state management and interaction prevention
 
-#### `LifeAndScoreManager.cs` (909 lines)
+#### `LifeAndScoreManager.cs`
 **Purpose**: Core scoring logic and food placement validation
 **Main Functions**:
 - Food placement correctness evaluation
@@ -97,7 +97,7 @@ Fridge Organization Game
 - `GetScore()`: Calculates final score based on correct placements
 - `GetDetailedItemPlacementData()`: Provides comprehensive placement analytics
 
-#### `TemperatureManager.cs` (317 lines)
+#### `TemperatureManager.cs`
 **Purpose**: Temperature control and feedback system
 **Main Functions**:
 - Temperature slider management
@@ -113,7 +113,7 @@ Fridge Organization Game
 
 ### Interaction Systems
 
-#### `drag.cs` (266 lines)
+#### `drag.cs`
 **Purpose**: Drag-and-drop mechanics for food items
 **Main Functions**:
 - Mouse-based dragging implementation
@@ -137,7 +137,7 @@ Fridge Organization Game
 
 ### Analytics and Data Collection
 
-#### `PlayFabManager.cs` (2,008 lines)
+#### `PlayFabManager.cs`
 **Purpose**: Comprehensive PlayFab integration for data collection
 **Main Functions**:
 - User authentication and session management
@@ -158,7 +158,7 @@ Fridge Organization Game
 - `LogFoodPlacement()`: Tracks individual placement events
 - `UpdateStatisticWithRetry()`: Robust statistic updating with error handling
 
-#### `GameAnalytics.cs` (636 lines)
+#### `GameAnalytics.cs`
 **Purpose**: Local analytics and engagement tracking
 **Main Functions**:
 - Session duration tracking
@@ -182,7 +182,7 @@ Fridge Organization Game
 
 ### Utility and Support Systems
 
-#### `ManagerInitializer.cs` (157 lines)
+#### `ManagerInitializer.cs`
 **Purpose**: Ensures proper initialization of all game managers
 **Main Functions**:
 - Manager instance creation and validation
@@ -190,7 +190,7 @@ Fridge Organization Game
 - Initialization order management
 - Error prevention and debugging
 
-#### `ButtonFixer.cs` (473 lines)
+#### `ButtonFixer.cs`
 **Purpose**: UI interaction management and button state control
 **Main Functions**:
 - Button interactivity management
@@ -198,7 +198,7 @@ Fridge Organization Game
 - UI state synchronization
 - Interaction prevention during transitions
 
-#### `UserData.cs` (114 lines)
+#### `UserData.cs`
 **Purpose**: User identification and session management
 **Main Functions**:
 - User ID generation and storage
@@ -208,7 +208,7 @@ Fridge Organization Game
 
 ### Web Integration
 
-#### `index.html` (45 lines)
+#### `index.html`
 **Purpose**: Web deployment interface with external user input
 **Main Functions**:
 - HTML-based user ID input (replacing Unity InputField)
@@ -319,7 +319,7 @@ The game collects the following data through PlayFab:
 
 1. **Clone and Open Project**:
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/sharyz119/Fridge2DGame.git
    cd Fridge_Organization_Game
    ```
    Open the project in Unity
@@ -327,7 +327,7 @@ The game collects the following data through PlayFab:
 2. **Install Dependencies**:
    - Import PlayFab SDK from Package Manager
    - Ensure TextMeshPro is installed
-   - Import any missing Unity packages
+   - Import any missing Unity packages (important!!)
 
 3. **Configure PlayFab**:
    - Create a PlayFab account and title
@@ -510,17 +510,61 @@ public bool CheckPlacement(string foodType, string zone, int temperature)
 
 ### Support and Resources
 
-#### Documentation Files
-- `SETUP_GUIDE.md`: Detailed setup instructions
-- `PUBLISHING_GUIDE.md`: Deployment procedures
-- `ANALYTICS_DASHBOARD.md`: Data analysis guide
-- `README.md`: Quick start guide
 
 #### External Resources
 - [Unity WebGL Documentation](https://docs.unity3d.com/Manual/webgl.html)
 - [PlayFab Unity SDK Guide](https://docs.microsoft.com/en-us/gaming/playfab/sdks/unity3d/)
 - [Itch.io HTML5 Games Guide](https://itch.io/docs/creators/html5)
 
----
 
-This documentation provides a comprehensive overview of the Fridge Organization Game project. For specific technical questions or issues not covered here, refer to the individual documentation files or contact the development team. 
+## Acknowledgements and Citation Requirements
+
+### 📜 **Code Usage and Attribution**
+
+**⚠️ IMPORTANT NOTICE:** If you use, modify, or distribute any part of this code, you **MUST** provide proper attribution to the original author and project.
+
+#### **Required Citation Format:**
+
+When using this code in academic work, research, or any other project, please cite:
+
+```
+Author: Zixuan Wang
+Project: Fridge Organization Game - Educational Food Storage Game
+GitHub Repository: https://github.com/sharyz119/Fridge2DGame.git
+Online Game: https://sharyz119.itch.io/fridge2dgame
+Year: 2024-2025
+```
+
+#### **For Academic Papers:**
+```bibtex
+@software{wang2024fridge,
+  author = {Wang, Zixuan},
+  title = {Fridge Organization Game: Educational Food Storage Game},
+  year = {2024},
+  url = {https://github.com/sharyz119/Fridge2DGame.git},
+  note = {Online game available at: https://sharyz119.itch.io/fridge2dgame}
+}
+```
+
+#### **For Code Comments:**
+```csharp
+/*
+ * Based on Fridge Organization Game by Zixuan Wang
+ * Original repository: https://github.com/sharyz119/Fridge2DGame.git
+ * Online game: https://sharyz119.itch.io/fridge2dgame
+ */
+```
+
+#### **For Documentation/README:**
+```markdown
+## Attribution
+This project is based on the Fridge Organization Game by Zixuan Wang.
+- GitHub Repository: https://github.com/sharyz119/Fridge2DGame.git
+- Online Game: https://sharyz119.itch.io/fridge2dgame
+```
+
+### 🎮 **Try the Original Game**
+
+Before modifying or using this code, we encourage you to play the original game to understand its educational purpose and research objectives:
+
+**🔗 Play Online:** [https://sharyz119.itch.io/fridge2dgame](https://sharyz119.itch.io/fridge2dgame)
