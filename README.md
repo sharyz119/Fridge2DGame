@@ -538,9 +538,9 @@ Year: 2024-2025
 #### **For Academic Papers:**
 ```bibtex
 @software{wang2024fridge,
-  author = {Wang, Zixuan},
+  author = {Zixuan Wang},
   title = {Fridge Organization Game: Educational Food Storage Game},
-  year = {2024},
+  year = {2025},
   url = {https://github.com/sharyz119/Fridge2DGame.git},
   note = {Online game available at: https://sharyz119.itch.io/fridge2dgame}
 }
